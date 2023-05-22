@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Halaman Registrasi</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      display: flex;
+      width: 600px;
+      height: 300px;
+      border: 1px solid #ccc;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .image {
+      flex: 1;
+      background-image: url('gambar.jpg'); /* Ganti dengan URL gambar yang sesuai */
+      background-size: cover;
+    }
+
+    .form {
+      flex: 1;
+      padding: 20px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .form-group input {
+      width: 100%;
+      padding: 5px;
+    }
+
+    .form-group input[type="submit"] {
+      background-color: #4CAF50;
+      color: white;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="container" style="display: flex;"> 
+    <div class="copy-image">
+        <img src="html/assets/gwk.png" alt="">
+        <h1>Take the first step towards your dream place</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti fugiat esse nisi praesentium blanditiis, aperiam cumque commodi. Fuga sit quidem inventore iste enim vitae quisquam, eius architecto! Facere, quibusdam sapiente.</p>
+    </div>
+
+    <div class="form">
+      <form action="">
+        <div class="input">
+            Fullname
+            <input type="text">
+        </div>
+        <div class="input">
+            Username
+            <input type="text">
+        </div>
+        <div class="input">
+            Email
+            <input type="email">
+        </div>
+        <div class="input">
+            Password
+            <input type="password">
+        </div>
+        <div class="input">
+            Re-enter Password
+            <input type="password">
+        </div>
+        <button>
+        </button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
