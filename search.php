@@ -1,6 +1,8 @@
 <?php
   #Connect to Database
-  $conn = new mysqli("localhost", "root", "125125", "WiFi");
+  
+  // [Parjay] database kita beda jadi harus disesuaiin dulu passwordnya
+  $conn = new mysqli("localhost", "root", "", "wisata_finder");
   $data = [];
   $keyword_tempat_wisata = mysqli_query($conn, "SELECT * FROM keyword_tempat_wisata");
 
@@ -16,6 +18,9 @@
     $data_pariwisata[$key] = $value; 
   }
   
+  // [Parjay] kalok mau liat datanya bisa di uncomment
+  // var_dump($data_pariwisata);
+
   #Data pariwisata dari Database
   // $data_pariwisata = [
   //   "GWK" => ["ganesha","wisnu","kencana", "gwk", "jimbaran", "badung"],
@@ -24,26 +29,30 @@
   # Menyimpan key untuk diambil data tempat wisatanya di database
   $temp_item = [];
   # Mengambil key yang di input oleh user
-  $search_key = strtolower($_POST["search"]);
-  $search_keys = explode(" ", $search_key);
-  # Mencari tempat wisata sesuai dengan input dari user
-  foreach($search_keys as $search_keyword){
-    foreach($data_pariwisata as $key => $keywords){
-      foreach($keywords as $keyword ){
-        if ($keyword === $search_keyword){
-          $temp_item[] = $key;
+  
+  // kalok $_POST["search"] ada valuenya baru search
+  if (isset($_POST["search"])) {
+    $search_key = strtolower($_POST["search"]);
+    $search_keys = explode(" ", $search_key);
+    # Mencari tempat wisata sesuai dengan input dari user
+    foreach($search_keys as $search_keyword){
+      foreach($data_pariwisata as $key => $keywords){
+        foreach($keywords as $keyword ){
+          if ($keyword === $search_keyword){
+            $temp_item[] = $key;
+          }
         }
       }
     }
   }
-  $wisata_places = array_unique($temp_item);
 
+  $wisata_places = array_unique($temp_item);
   // Mengambil data path untuk foto
-  while( $tempat_wisata = mysqli_fetch_assoc($keyword_tempat_wisata)){
+  while( $tempat_wisata = mysqli_fetch_assoc($keyword_tempat_wisata)) {
     $data[] = mysqli_query($conn, "SELECT * FROM photo_wisata_place");
-  foreach($data as $place){
-    $photo_path[$place["place_name"]] = $photo_path["folder_path"];
-  }
+    foreach($data as $place){
+      $photo_path[$place["place_name"]] = $photo_path["folder_path"];
+    }
   }
   
 
