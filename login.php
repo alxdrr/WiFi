@@ -1,17 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-</head>
-<body>
-    <form>
-        <input type="text" placeholder="Username/email/no. HP">
-        <input type="password" placeholder="Password">
-        <input type="submit">
-        <p>Belum punya akun?<a href="/regis.php">Registrasi</a></p>
-    </form>
-</body>
-</html>
+<?php
+require "db.php";
+require "function.php";
+
+$sql = "SELECT * FROM users";
+$arrUser = get_query($sql);
+
+if (isset($_POST['submit'])) {
+    $user = $_POST['username'];
+    $pass = $_POST['password'];
+
+    $sql = "SELECT COUNT(*) AS sum FROM `users` WHERE username = '$user' AND password = '$pass'";
+    $arrLogin = get_query($sql);
+
+    if ($arrLogin[0]['sum'] == '1') {
+        header("location: html/home.html");
+    }
+    $_SESSION['save'] = $user;
+}
+?>
