@@ -1,63 +1,9 @@
 <?php
   #Connect to Database
-  
-  // [Parjay] database kita beda jadi harus disesuaiin dulu passwordnya
-  $conn = new mysqli("localhost", "root", "", "wisata_finder");
-  $data = [];
-  $keyword_tempat_wisata = mysqli_query($conn, "SELECT * FROM keyword_tempat_wisata");
-
-  while( $tempat_wisata = mysqli_fetch_assoc($keyword_tempat_wisata)){
-    $data[] = $tempat_wisata;
+  require "function.php";
+  if (isset($_POST["search"])){
+    $wisata_place = search_wisata_place($_POST["search"]);
   }
-  $data_pariwisata = [];
-  foreach($data as $place){
-    $key = $place["place_name"];
-    $detail_name = explode(" ", $place["detail_name"]);
-    $detail_location = explode(" ",$place["detail_location"]);
-    $value = array_merge($detail_name, $detail_location);
-    $data_pariwisata[$key] = $value; 
-  }
-  
-  // [Parjay] kalok mau liat datanya bisa di uncomment
-  // var_dump($data_pariwisata);
-
-  #Data pariwisata dari Database
-  // $data_pariwisata = [
-  //   "GWK" => ["ganesha","wisnu","kencana", "gwk", "jimbaran", "badung"],
-  //   "Tanah Lot" => ["pantai","tanah","lot", "tabanan", "kediri"],
-  // ];
-  # Menyimpan key untuk diambil data tempat wisatanya di database
-  $temp_item = [];
-  # Mengambil key yang di input oleh user
-  
-  // kalok $_POST["search"] ada valuenya baru search
-  if (isset($_POST["search"])) {
-    $search_key = strtolower($_POST["search"]);
-    $search_keys = explode(" ", $search_key);
-    # Mencari tempat wisata sesuai dengan input dari user
-    foreach($search_keys as $search_keyword){
-      foreach($data_pariwisata as $key => $keywords){
-        foreach($keywords as $keyword ){
-          if ($keyword === $search_keyword){
-            $temp_item[] = $key;
-          }
-        }
-      }
-    }
-  }
-
-  $wisata_places = array_unique($temp_item);
-  // Mengambil data path untuk foto
-  while( $tempat_wisata = mysqli_fetch_assoc($keyword_tempat_wisata)) {
-    $data[] = mysqli_query($conn, "SELECT * FROM photo_wisata_place");
-    foreach($data as $place){
-      $photo_path[$place["place_name"]] = $photo_path["folder_path"];
-    }
-  }
-  
-
-
-  
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -117,11 +63,8 @@
       </form>
     </section>
     <div class="search-items">
-      <?php foreach($wisata_places as $place): ?>
-      <?php
-        $imagePath = "Tempat Wisata\\" . $place . "\\" . $place . "-1.jpg";
-        ?> 
-      <img src="<?php echo $imagePath; ?>" alt="no found image" width="300px" height="300px">
+      <?php foreach($wisata_place as $place): ?> 
+      <img src="<?php echo "Tempat Wisata\\" . $place . "\\" . $place . "-1.jpg"; ?>" alt="no found image" width="300px" height="300px">
       <h3><?php echo "$place"?></h3>
       <?php endforeach ?>
       </div>
