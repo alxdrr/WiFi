@@ -1,12 +1,12 @@
 <?php
-            if (isset($_POST["submit"])){
-                if ($_POST['password'] === $_POST['confirm_password']){
-                    echo "<p> Success </p>";
-                } else{
-                    echo "<p> Gagal </p>";
-                }
-            }
-        ?>
+    if (isset($_POST["submit"])){
+        if ($_POST['password'] === $_POST['confirm_password']){
+            echo "<p> Success </p>";
+        } else{
+            echo "<p> Gagal </p>";
+        }
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
