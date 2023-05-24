@@ -13,7 +13,7 @@ if (isset($_POST['submit'])) {
     $arrLogin = get_query($sql);
 
     if ($arrLogin[0]['sum'] == '1') {
-        header("location: home.html");
+        header("location: html/home.html");
     }
     $_SESSION['save'] = $user;
 }
