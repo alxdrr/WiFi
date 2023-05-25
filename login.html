@@ -10,11 +10,10 @@
       crossorigin="anonymous"
     />
     <link rel="icon" href="assets/Logo.png" />
-    <link rel="stylesheet" href="css/home.css" />
-    <link rel="stylesheet" href="css/root.css" />
-    <link rel="stylesheet" href="css/footer.css" />
-    <link rel="stylesheet" href="css/navbar.css" />
-    <link rel="stylesheet" href="css/login.css" />
+    <link rel="stylesheet" href="assets/css/root.css" />
+    <link rel="stylesheet" href="assets/css/footer.css" />
+    <link rel="stylesheet" href="assets/css/navbar.css" />
+    <link rel="stylesheet" href="assets/css/login.css" />
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
@@ -24,11 +23,9 @@
 
   <body>
     <nav class="nav container-fluid">
-      <a href="login.html">
-        <img src="assets/Brand.png" alt="" />
-      </a>
+      <img src="assets/image/Brand.png" alt="" />
       <div class="nav-items">
-        <a class="" href="home.html">Home</a>
+        <a class="" href="index.html">Home</a>
         <a class="" href="">Search</a>
         <a class="" href="">Top Wisata</a>
         <div class="dropdown">
@@ -48,16 +45,14 @@
         </div>
       </div>
       <div class="button-stack">
-        <a href="registrasi.php">
-          <button class="btn-solid">Sign Up</button>
-        </a>
+        <a href="registrasi.php"><button class="btn-solid">Sign Up</button></a>
       </div>
     </nav>
 
-    <main class="form-signin w-100 mx-auto text-center">
+    <main class="form-signin container-fluid">
       <form method="post" action="../login.php">
-        <h1 class="text display-1 p-4 fw-bold text-warning">Login</h1>
-        <div class="form-floating mb-2">
+        <h1 class="text display-1 fw-bold">Login</h1>
+        <div class="form-floating">
           <input
             required
             type="text"
@@ -78,7 +73,7 @@
           <label for="floatingPassword">Password</label>
         </div>
 
-        <div class="checkbox mb-3 text-start">
+        <div class="checkbox text-start">
           <label>
             <input type="checkbox" name="remember" value="remember-me" />
             Remember me
@@ -92,24 +87,34 @@
           Sign in
         </button>
         <div class="div">
-          <label class="mt-1" for=""
+          <label class="" for=""
             >Don't have account?
-            <a href="registrasi.php"> Register </a>
+            <a href="registrasi.php"> Register Here </a>
           </label>
         </div>
-        <p class="mt-3 mb-5 text-body-secondary">
+        <p class="text-body-secondary mt-5 mb-2">
           &copy; 2023 Wisata Find, All Rights Reserved.
         </p>
       </form>
+
+      <div class="img">
+        <img src="assets\image\regist.png" alt="" />
+        <h1 class="header">
+          Experience the magic of Bali at your fingertips with our user-friendly
+          login feature.
+        </h1>
+      </div>
     </main>
 
-    <footer class="footer py-10 container-fluid">
+    <footer class="footer container-fluid">
       <div id="connect">
         Connect With Us
         <div class="social-icon">
-          <a href="linked.com"><img src="assets/linkedin.png" alt="" /></a>
-          <a href="facebook.com"><img src="assets/fb.png" alt="" /></a>
-          <a href="twitter.com"><img src="assets/twt.png" alt="" /></a>
+          <a href="linked.com"
+            ><img src="assets/image/linkedin.png" alt=""
+          /></a>
+          <a href="facebook.com"><img src="assets/image/fb.png" alt="" /></a>
+          <a href="twitter.com"><img src="assets/image/twt.png" alt="" /></a>
         </div>
       </div>
       <div id="explore">
@@ -143,9 +148,7 @@
       </div>
 
       <div id="copyright">
-        <a href="login.html">
-          <img src="assets/Brand.png" alt="" />
-        </a>
+        <a href="index.html"><img src="assets/image/Brand.png" alt="" /></a>
         © 2023 Wisata Find, All Rights Reserved.
       </div>
     </footer>
