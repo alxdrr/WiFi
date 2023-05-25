@@ -1,3 +1,5 @@
+//Value yang akan dikirim
+const getValue =document.getElementById("nilai").getAttribute("getNilai");
 //Bagian show event
 const showEvent = document.getElementById("event");
 const eventPlace =  document.getElementById("list event");
@@ -14,7 +16,7 @@ showEvent.addEventListener('click', function(){
             a += 1;
         }
     }
-    xhr.open('GET', 'php/show_event.php', true);
+    xhr.open('GET', `ajax/show_event.php?place=Tanah%Lot`, true);
     xhr.send();
     }
     else{
@@ -41,7 +43,7 @@ showReview.addEventListener('click', function(){
             i += 1;
         }
     }
-    xhr.open('GET', 'php/show_reviews.php', true);
+    xhr.open('GET', `ajax/show_reviews.php?place=Tanah%Lot`, true);
     xhr.send();
     }
     else{

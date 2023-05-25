@@ -1,21 +1,7 @@
 <?php
-    //Kirim Data kesini masuk
-    //$place_name = $_POST["place_name"];
-    //sementara
+    require "db.php";
     $place_name = $_GET["place"];
-    $data = [
-        "GWK" => [
-            "title" => "Garuda Wisnu Kencana",
-            "address" => "Jl. Raya Uluwatu, Ungasan, Kuta Sel, Kabupaten Badung, Bali",
-            "fee" => "300.000"
-        ],
-        "Tanah Lot" => [
-            "title" => "Pantai Tanah Lot",
-            "address" => "Br. Beraban, Kec. Kediri, Kabupaten Tabanan, Bali",
-            "fee" => "200.000"
-        ],
-    ];
-    $selected_data = $data[$place_name]; 
+    $detail = get_detail_wisata($place_name);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -25,12 +11,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo "$place_name"?> | Page</title>
 </head>
-<body>
+<body id="nilai" getNilai="<?php echo $place_name;?>">
     <img src="<?php echo "Tempat Wisata\\" . $place_name . "\\" . $place_name . "-1.jpg"; ?>" alt="">
-    <h1><?php echo $selected_data["title"]?></h1>
+    <h1><?php echo $detail["title"]?></h1>
     <h3>Alamat :</h3>
-    <h5><?php echo $selected_data["address"] ?></h5>
-    <h3>Harga Ticket : Rp <?php echo $selected_data["fee"] ?></h3>
+    <h5><?php echo $detail["address"] ?></h5>
+    <h3>Harga Ticket : Rp <?php echo $detail["price"] ?></h3>
     <label id="event">Events</label>
     <div id="list event"></div><br>
     <label id="review">Reviews</label>
