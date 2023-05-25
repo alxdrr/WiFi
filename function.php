@@ -46,8 +46,14 @@ function search_wisata_place($search_word){
     if($wisata_places !== null){
       foreach($wisata_places as $place){
         $image_path = "Tempat Wisata\\" . $place . "\\" . $place . "-1.jpg";
-        echo "<img src='$image_path' alt='no found image' width='300px' height='300px'>";
-        echo "<h3>$place</h3>";
+        echo "<div class='result-card'>";
+        echo "<img src='$image_path' alt='no found image' class='card-img-top'";
+        echo "<h1 class='card-title'><?php echo '$place'?></h1>";
+        echo "<h1 class='card-desc'>Taman Wisata</h1>";
+        echo "<h1 class='card-location'>Jimbaran, Jl. Raya Uluwatu</h1>";
+        echo "<p class='card-text'>GWK Cultural Park is home to some of the most iconic cultural landmarks in Bali, including the magnificent Garuda Wisnu Kencana statue </p>";
+        echo "<a id='btn-card' href='#' class='bx bx-right-arrow-alt' type='button'></a>";
+        echo "</div>";
       }
     }else{
       return 0;

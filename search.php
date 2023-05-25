@@ -72,33 +72,12 @@
           name="search"
           placeholder="Search"
           aria-label="default input example"
-          value="<?php echo isset($search_key) ? $search_key : ''; ?>"
         />
         <input class="btn-solid" type="submit" value="Explore" />
       </form>
     </section>
     <section class="result-cards">
       <?php show_wisata_image($image_path)?>
-          <div class="card-body">
-                <h1 class="card-title"><?php echo "$place"?></h1>
-                <h1 class="card-desc">Taman Wisata</h1>
-                <h1 class="card-location">Jimbaran, Jl. Raya Uluwatu</h1>
-
-                <p class="card-text">
-                  GWK Cultural Park is home to some of the most iconic cultural
-                  landmarks in Bali, including the magnificent Garuda Wisnu Kencana
-                  statue
-                </p>
-              </div>
-
-              <a
-                id="btn-card"
-                href="#"
-                class="bx bx-right-arrow-alt"
-                type="button"
-              ></a>
-        </div>
-        <?php endforeach ?>
     </section>
 
 
