@@ -27,7 +27,7 @@
       <img src="assets/image/Brand.png" alt="" />
       <div class="nav-items">
         <a class="active" href="index.html">Home</a>
-        <a class="" href="">Search</a>
+        <a class="" href="search.php">Search</a>
         <a class="" href="">Top Wisata</a>
         <div class="dropdown">
           <button
@@ -56,12 +56,13 @@
       <div class="hero-text">
         Discover the enchanting beauty of Bali's hidden treasures
       </div>
-      <form action="" class="search-bar">
+      <form action="search.php" method="post" class="search-bar">
         <input
           class="form-control"
           type="text"
           placeholder="Search"
           aria-label="default input example"
+          name="search"
         />
         <input class="btn-solid" type="submit" value="Explore" />
       </form>

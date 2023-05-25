@@ -18,7 +18,7 @@ function search_wisata_place($search_word){
   # Menyimpan key untuk diambil data tempat wisatanya di database
   $data_pariwisata = get_wisata_place_keyword(); 
   # Mengambil key yang di input oleh user
-  
+  $temp_item = [];
   // kalok $_POST["search"] ada valuenya baru search
     $search_key = strtolower($search_word);
     $search_keys = explode(" ", $search_key);
@@ -34,6 +34,22 @@ function search_wisata_place($search_word){
     }
   
   # Menghilangkan value yang sama
-  $wisata_places = array_unique($temp_item);
+  if($temp_item == null){
+    return null;
+  }else{
+    $wisata_places = array_unique($temp_item);
   return $wisata_places;
+  }
+}
+
+  function show_wisata_image($wisata_places){
+    if($wisata_places !== null){
+      foreach($wisata_places as $place){
+        $image_path = "Tempat Wisata\\" . $place . "\\" . $place . "-1.jpg";
+        echo "<img src='$image_path' alt='no found image' width='300px' height='300px'>";
+        echo "<h3>$place</h3>";
+      }
+    }else{
+      return 0;
+    }
   }

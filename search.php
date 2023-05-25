@@ -1,9 +1,13 @@
 <?php
   #Connect to Database
   require "function.php";
-  if (isset($_POST["search"])){
-    $wisata_place = search_wisata_place($_POST["search"]);
+  if(isset($_POST["search"])){
+    $image_path = search_wisata_place($_POST["search"]);
   }
+  else{
+    $image_path = null;
+  }
+  
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -19,10 +23,10 @@
       crossorigin="anonymous"
     />
     <link rel="icon" href="assets/Logo.png" />
-    <link rel="stylesheet" href="html/css/home.css" />
-    <link rel="stylesheet" href="html/css/root.css" />
-    <link rel="stylesheet" href="html/css/footer.css" />
-    <link rel="stylesheet" href="html/css/navbar.css" />
+    <link rel="stylesheet" href="css/home.css" />
+    <link rel="stylesheet" href="css/root.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/navbar.css" />
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
@@ -63,10 +67,7 @@
       </form>
     </section>
     <div class="search-items">
-      <?php foreach($wisata_place as $place): ?> 
-      <img src="<?php echo "Tempat Wisata\\" . $place . "\\" . $place . "-1.jpg"; ?>" alt="no found image" width="300px" height="300px">
-      <h3><?php echo "$place"?></h3>
-      <?php endforeach ?>
+      <?php show_wisata_image($image_path)?>
       </div>
     
     <section class="top-wisata container-fluid">
