@@ -12,21 +12,22 @@
       crossorigin="anonymous"
     />
     <link rel="icon" href="assets/Logo.png" />
-    <link rel="stylesheet" href="css/home.css" />
-    <link rel="stylesheet" href="css/root.css" />
-    <link rel="stylesheet" href="css/footer.css" />
-    <link rel="stylesheet" href="css/navbar.css" />
+    <link rel="stylesheet" href="assets/css/home.css" />
+    <link rel="stylesheet" href="assets/css/root.css" />
+    <link rel="stylesheet" href="assets/css/footer.css" />
+    <link rel="stylesheet" href="assets/css/navbar.css" />
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
   </head>
+
   <body>
     <nav class="nav container-fluid">
-      <img src="assets/Brand.png" alt="" />
+      <img src="assets/image/Brand.png" alt="" />
       <div class="nav-items">
-        <a class="active" href="">Home</a>
-        <a class="" href="">Search</a>
+        <a class="active" href="index.html">Home</a>
+        <a class="" href="search.php">Search</a>
         <a class="" href="">Top Wisata</a>
         <div class="dropdown">
           <button
@@ -45,18 +46,24 @@
         </div>
       </div>
       <div class="button-stack">
-        <button class="btn-solid">Sign Up</button>
-        <button class="btn-outline">Login</button>
+        <a href="regis.php"><button class="btn-solid">Sign Up</button></a>
+        <a href="login.html"><button class="btn-outline">Login</button></a>
       </div>
     </nav>
+
     <section class="hero container-fluid">
-      <img src="assets/home-1.png" alt="" />
+      <img src="assets/image/home-1.png" alt="" />
       <div class="hero-text">
         Discover the enchanting beauty of Bali's hidden treasures
       </div>
       <form action="" class="search-bar">
-        <input type="search" placeholder="Search" />
-        <input class="btn-solid" type="submit" value="Submit" />
+        <input
+          class="form-control"
+          type="text"
+          placeholder="Search"
+          aria-label="default input example"
+        />
+        <input class="btn-solid" type="submit" value="Explore" />
       </form>
     </section>
 
@@ -64,7 +71,7 @@
       <div class="text-1">Top Wisata</div>
       <div class="wisata-cards">
         <div class="wisata-card">
-          <img src="assets/gwk.png" class="card-img-top" alt="..." />
+          <img src="assets/image/gwk.png" class="card-img-top" alt="..." />
           <div class="card-body">
             <h1 class="card-title">Garuda Wisnu Kencana Cultural Park</h1>
             <h1 class="card-desc">Taman Wisata</h1>
@@ -76,24 +83,73 @@
               statue
             </p>
           </div>
-          <button id="btn-card">
-            <a
-              href="#"
-              class="bx bx-right-arrow-alt"
-            ></a>
-          </button>
+
+          <a
+            id="btn-card"
+            href="#"
+            class="bx bx-right-arrow-alt"
+            type="button"
+          ></a>
+        </div>
+
+        <div class="wisata-card">
+          <img src="assets/image/gwk.png" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h1 class="card-title">Garuda Wisnu Kencana Cultural Park</h1>
+            <h1 class="card-desc">Taman Wisata</h1>
+            <h1 class="card-location">Jimbaran, Jl. Raya Uluwatu</h1>
+
+            <p class="card-text">
+              GWK Cultural Park is home to some of the most iconic cultural
+              landmarks in Bali, including the magnificent Garuda Wisnu Kencana
+              statue
+            </p>
+          </div>
+
+          <a
+            id="btn-card"
+            href="#"
+            class="bx bx-right-arrow-alt"
+            type="button"
+          ></a>
+        </div>
+        <div class="wisata-card">
+          <img src="assets/image/gwk.png" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h1 class="card-title">Garuda Wisnu Kencana Cultural Park</h1>
+            <h1 class="card-desc">Taman Wisata</h1>
+            <h1 class="card-location">Jimbaran, Jl. Raya Uluwatu</h1>
+
+            <p class="card-text">
+              GWK Cultural Park is home to some of the most iconic cultural
+              landmarks in Bali, including the magnificent Garuda Wisnu Kencana
+              statue
+            </p>
+          </div>
+
+          <a
+            id="btn-card"
+            href="#"
+            class="bx bx-right-arrow-alt"
+            type="button"
+          ></a>
         </div>
       </div>
-      <button class="btn-outline">Explore <div class="bx bx-right-arrow-alt"></div></button>
+      <button class="btn-outline">
+        Explore
+        <div class="bx bx-right-arrow-alt"></div>
+      </button>
     </section>
 
     <footer class="footer container-fluid">
       <div id="connect">
         Connect With Us
         <div class="social-icon">
-          <a href="linked.com"><img src="Assets/icon/linkedin.png" alt="" /></a>
-          <a href="facebook.com"><img src="Assets/icon/fb.png" alt="" /></a>
-          <a href="twitter.com"><img src="Assets/icon/twt.png" alt="" /></a>
+          <a href="linked.com"
+            ><img src="assets/image/linkedin.png" alt=""
+          /></a>
+          <a href="facebook.com"><img src="assets/image/fb.png" alt="" /></a>
+          <a href="twitter.com"><img src="assets/image/twt.png" alt="" /></a>
         </div>
       </div>
       <div id="explore">
@@ -127,10 +183,11 @@
       </div>
 
       <div id="copyright">
-        <a href=""><img src="assets/Brand.png" alt="" /></a>
+        <a href="index.html"><img src="assets/image/Brand.png" alt="" /></a>
         © 2023 Wisata Find, All Rights Reserved.
       </div>
     </footer>
+    <script src="assets/js/navbar.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
       integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE"

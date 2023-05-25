@@ -55,17 +55,14 @@
     }
   }
   
-
-
-  
 ?>
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Wisata Find - Search</title>
+    <title>Wisata Find - Home</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -73,21 +70,21 @@
       crossorigin="anonymous"
     />
     <link rel="icon" href="assets/Logo.png" />
-    <link rel="stylesheet" href="html/css/home.css" />
-    <link rel="stylesheet" href="html/css/root.css" />
-    <link rel="stylesheet" href="html/css/footer.css" />
-    <link rel="stylesheet" href="html/css/navbar.css" />
+    <link rel="stylesheet" href="assets/css/search.css" />
+    <link rel="stylesheet" href="assets/css/root.css" />
+    <link rel="stylesheet" href="assets/css/footer.css" />
+    <link rel="stylesheet" href="assets/css/navbar.css" />
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
-  </head>
+</head>
   <body>
-    <nav class="nav container-fluid">
-      <img src="assets/Brand.png" alt="" />
+  <nav class="nav container-fluid">
+      <img src="assets/image/Brand.png" alt="" />
       <div class="nav-items">
-        <a class="active" href="">Home</a>
-        <a class="" href="">Search</a>
+        <a class="" href="index.html">Home</a>
+        <a class="active" href="">Search</a>
         <a class="" href="">Top Wisata</a>
         <div class="dropdown">
           <button
@@ -106,60 +103,66 @@
         </div>
       </div>
       <div class="button-stack">
-        <button class="btn-solid">Sign Up</button>
-        <button class="btn-outline">Login</button>
+        <a href="regis.php"><button class="btn-solid">Sign Up</button></a>
+        <a href="login.html"><button class="btn-outline">Login</button></a>
       </div>
   </nav>
+
     <section class="hero container-fluid">
-      <form action="" method="post" class="search-bar">
-        <input type="search" placeholder="Search" name="search" />
-        <input class="btn-solid" type="submit" value="Submit" />
+      <img src="assets/image/home-1.png" alt="" />
+      <div class="hero-text">
+        Discover the enchanting beauty of Bali's hidden treasures
+      </div>
+      <form action="" method="post" class="search-bar" >
+        <input
+          class="form-control"
+          type="text"
+          name="search"
+          placeholder="Search"
+          aria-label="default input example"
+          value="<?php echo isset($search_key) ? $search_key : ''; ?>"
+        />
+        <input class="btn-solid" type="submit" value="Explore" />
       </form>
     </section>
-    <div class="search-items">
-      <?php foreach($wisata_places as $place): ?>
-      <?php
-        $imagePath = "Tempat Wisata\\" . $place . "\\" . $place . "-1.jpg";
-        ?> 
-      <img src="<?php echo $imagePath; ?>" alt="no found image" width="300px" height="300px">
-      <h3><?php echo "$place"?></h3>
-      <?php endforeach ?>
-      </div>
-    
-    <section class="top-wisata container-fluid">
-      <div class="text-1">Top Wisata</div>
-      <div class="wisata-cards">
-        <div class="wisata-card">
-          <img src="assets/gwk.png" class="card-img-top" alt="..." />
-          <div class="card-body">
-            <h1 class="card-title">Garuda Wisnu Kencana Cultural Park</h1>
-            <h1 class="card-desc">Taman Wisata</h1>
-            <h1 class="card-location">Jimbaran, Jl. Raya Uluwatu</h1>
 
-            <p class="card-text">
-              GWK Cultural Park is home to some of the most iconic cultural
-              landmarks in Bali, including the magnificent Garuda Wisnu Kencana
-              statue
-            </p>
-          </div>
-          <button id="btn-card">
-            <a
-              href="#"
-              class="bx bx-right-arrow-alt"
-            ></a>
-          </button>
+    <section class="result-cards">
+      <?php foreach($wisata_places as $place): ?>
+        <div class="result-card">
+          <?php $imagePath = "Tempat Wisata\\" . $place . "\\" . $place . "-1.jpg"; ?> 
+          <img src="<?php echo $imagePath; ?>" class="card-img-top" alt="no found image" />
+          <div class="card-body">
+                <h1 class="card-title"><?php echo "$place"?></h1>
+                <h1 class="card-desc">Taman Wisata</h1>
+                <h1 class="card-location">Jimbaran, Jl. Raya Uluwatu</h1>
+
+                <p class="card-text">
+                  GWK Cultural Park is home to some of the most iconic cultural
+                  landmarks in Bali, including the magnificent Garuda Wisnu Kencana
+                  statue
+                </p>
+              </div>
+
+              <a
+                id="btn-card"
+                href="#"
+                class="bx bx-right-arrow-alt"
+                type="button"
+              ></a>
         </div>
-      </div>
-      <button class="btn-outline">Explore <div class="bx bx-right-arrow-alt"></div></button>
+        <?php endforeach ?>
     </section>
+
 
     <footer class="footer container-fluid">
       <div id="connect">
         Connect With Us
         <div class="social-icon">
-          <a href="linked.com"><img src="Assets/icon/linkedin.png" alt="" /></a>
-          <a href="facebook.com"><img src="Assets/icon/fb.png" alt="" /></a>
-          <a href="twitter.com"><img src="Assets/icon/twt.png" alt="" /></a>
+          <a href="linked.com"
+            ><img src="assets/image/linkedin.png" alt=""
+          /></a>
+          <a href="facebook.com"><img src="assets/image/fb.png" alt="" /></a>
+          <a href="twitter.com"><img src="assets/image/twt.png" alt="" /></a>
         </div>
       </div>
       <div id="explore">
@@ -193,10 +196,12 @@
       </div>
 
       <div id="copyright">
-        <a href=""><img src="assets/Brand.png" alt="" /></a>
+        <a href="index.html"><img src="assets/image/Brand.png" alt="" /></a>
         © 2023 Wisata Find, All Rights Reserved.
       </div>
     </footer>
+    <script src="assets/js/navbar.js"></script>
+
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
       integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE"
