@@ -4,18 +4,15 @@
   gap: 16px;
   width: 738px;
   height: 281px;
-  margin-top: 15vw;
+  margin-top: 5vw;
 }
-
 .hero img {
   position: absolute;
   width: 100%;
-  min-height: 583px;
   left: 0px;
   top: 0px;
   z-index: -1;
 }
-
 .hero-text {
   width: 704px;
   height: 201px;
@@ -39,14 +36,15 @@
   flex: row;
   gap: 2px;
 }
-
-.form-control:focus {
-  color: var(--bs-body-color);
-  background-color: var(--bs-form-control-bg);
-  border-color: #ecfe86;
-  outline: 0;
-  box-shadow: 0 0 0 0.25rem #ffb7003f;
-
+.hero form :nth-child(1) {
+  width: 80%;
+  height: 48px;
+  border-radius: 8px;
+  border: none;
+}
+.hero form :nth-child(1)::placeholder {
+  padding: 0 16px;
+}
 /* ================================================== TOP WISATA ========================================= */
 .top-wisata {
   display: flex;
@@ -54,7 +52,7 @@
   align-items: center;
   padding: 0px;
   gap: 45px;
-  margin-top: 38%;
+  margin-top: 600px;
   margin-bottom: 240px;
 }
 
@@ -92,8 +90,8 @@
   border-radius: 8px;
 }
 .top-wisata .wisata-cards .wisata-card img {
-  max-width: 20vw;
-  padding: 1vh 1vw;
+  max-width: fit-content;
+}
 
 .top-wisata .wisata-cards .wisata-card .card-body {
   display: flex;
@@ -139,32 +137,13 @@
   border: none;
 
   background: #ffb600;
-  color: var(--secondary-color);
   box-shadow: 0px 9px 13.5px -2.7px rgba(0, 0, 0, 0.1),
     0px 3.6px 5.4px -1.8px rgba(0, 0, 0, 0.05);
   border-radius: 5.4px;
 }
-.top-wisata .wisata-cards .wisata-card #btn-card {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 8px 12px;
-  gap: 8px;
 
-  width: auto;
-  height: auto;
-  border: none;
-
-  background: #ffb600;
+.top-wisata .wisata-cards .wisata-card #btn-card a{
+  margin: 4px 2px;
   color: var(--secondary-color);
-  box-shadow: 0px 9px 13.5px -2.7px rgba(0, 0, 0, 0.1),
-    0px 3.6px 5.4px -1.8px rgba(0, 0, 0, 0.05);
-  border-radius: 5.4px;
-  transition: all 0.1s;
-}
-
-.top-wisata .wisata-cards .wisata-card #btn-card:hover {
-  scale: 1.2;
-  transition: all 0.2s;
+  transform: scale(1.2);
 }
