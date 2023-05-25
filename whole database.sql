@@ -18,6 +18,33 @@ USE `wisata_finder`;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
+-- Table structure for table `detail_wisata`
+--
+
+DROP TABLE IF EXISTS `detail_wisata`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `detail_wisata` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `place_name` varchar(50) NOT NULL,
+  `title` varchar(50) NOT NULL,
+  `price` varchar(25) NOT NULL,
+  `address` varchar(100) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `detail_wisata`
+--
+
+LOCK TABLES `detail_wisata` WRITE;
+/*!40000 ALTER TABLE `detail_wisata` DISABLE KEYS */;
+INSERT INTO `detail_wisata` VALUES (1,'Tanah Lot','Tanah Lot','20.000 orang','Br. Beraban, Kec. Kediri, Kabupaten Tabanan, Bali');
+/*!40000 ALTER TABLE `detail_wisata` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `keyword_tempat_wisata`
 --
 
@@ -68,6 +95,33 @@ LOCK TABLES `photo_wisata_place` WRITE;
 UNLOCK TABLES;
 
 --
+-- Table structure for table `reviews`
+--
+
+DROP TABLE IF EXISTS `reviews`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `reviews` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `place_name` varchar(50) NOT NULL,
+  `username` varchar(100) NOT NULL,
+  `date_review` datetime DEFAULT CURRENT_TIMESTAMP,
+  `reviews` text NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `reviews`
+--
+
+LOCK TABLES `reviews` WRITE;
+/*!40000 ALTER TABLE `reviews` DISABLE KEYS */;
+INSERT INTO `reviews` VALUES (1,'Tanah Lot','andi','2023-05-26 01:08:10','Banyak ada makanan enak, Tempatnya sangat bagus ada goa ular juga'),(2,'Tanah Lot','ode','2023-05-26 01:08:36','Tempatnya sangat bagus, Bersih tempatnya, Puranya bagus, sunset bagus');
+/*!40000 ALTER TABLE `reviews` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `users`
 --
 
@@ -91,6 +145,33 @@ LOCK TABLES `users` WRITE;
 INSERT INTO `users` VALUES ('admin','admin','1'),('andi','andi','0');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
+
+--
+-- Table structure for table `wisata_events`
+--
+
+DROP TABLE IF EXISTS `wisata_events`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `wisata_events` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `place_name` varchar(50) NOT NULL,
+  `event_name` varchar(100) NOT NULL,
+  `event_date` date NOT NULL,
+  `detail` text NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `wisata_events`
+--
+
+LOCK TABLES `wisata_events` WRITE;
+/*!40000 ALTER TABLE `wisata_events` DISABLE KEYS */;
+INSERT INTO `wisata_events` VALUES (1,'Tanah Lot','Tanah Lot Arts Festival','2023-06-01','The town of Tabanan, Bali is home to Tanah Lot Temple. A beautiful and magnificent temple standing on an offshore island. Right in the northwestern of Denpasar. Thousands of tourist visit this site every year. Then the government thought of an upgrade. That\'s how Tanah Lot Arts Festival started. The target was 55,000 thousand visitors. It also introduces a massive performance by 1800 dancers called Rejang Sandat. Tanah Lot Arts Festival runs for three days showcasing numerous cultural Tabanan heritage. While the schedule isn\'t limited to arts, it also has culinary sections. Where the coffee festival will also take part, it exhibits local coffee varieties as well as talented baristas from coffee shops across the city.');
+/*!40000 ALTER TABLE `wisata_events` ENABLE KEYS */;
+UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -101,4 +182,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-05-24 19:32:47
+-- Dump completed on 2023-05-26  3:07:43

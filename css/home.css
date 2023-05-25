@@ -1,0 +1,149 @@
+.hero {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 738px;
+  height: 281px;
+  margin-top: 5vw;
+}
+.hero img {
+  position: absolute;
+  width: 100%;
+  left: 0px;
+  top: 0px;
+  z-index: -1;
+}
+.hero-text {
+  width: 704px;
+  height: 201px;
+
+  font-family: var(--primary-font);
+  font-style: normal;
+  font-weight: 800;
+  font-size: 56px;
+  line-height: 120%;
+  /* or 67px */
+
+  letter-spacing: 0.01em;
+
+  background: linear-gradient(90deg, #ffffff 21.1%, #ffb600 98.53%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.hero form {
+  display: flex;
+  flex: row;
+  gap: 2px;
+}
+.hero form :nth-child(1) {
+  width: 80%;
+  height: 48px;
+  border-radius: 8px;
+  border: none;
+}
+.hero form :nth-child(1)::placeholder {
+  padding: 0 16px;
+}
+/* ================================================== TOP WISATA ========================================= */
+.top-wisata {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px;
+  gap: 45px;
+  margin-top: 600px;
+  margin-bottom: 240px;
+}
+
+.text-1 {
+  color: #023047;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 56px;
+}
+
+.top-wisata .wisata-cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  gap: 32px;
+}
+
+.top-wisata .wisata-cards .wisata-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 22px 0px;
+  gap: 24px;
+
+  width: auto;
+  height: auto;
+
+  background: #ffffff;
+  box-shadow: 0px 18px 22.5px -4.5px rgba(0, 0, 0, 0.1),
+    0px 9px 9px -4.5px rgba(0, 0, 0, 0.04);
+  border-radius: 8px;
+}
+.top-wisata .wisata-cards .wisata-card img {
+  max-width: fit-content;
+}
+
+.top-wisata .wisata-cards .wisata-card .card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0px 32px;
+  gap: 8px;
+}
+
+.card-title {
+  color: #2d3648;
+  font-size: 20px;
+  max-width: 282px;
+}
+.card-desc {
+  font-size: 16px;
+  color: #717d96;
+  max-width: 282px;
+}
+.card-location {
+  color: #717d96;
+  font-size: 16px;
+  font-weight: 800;
+  max-width: 282px;
+}
+.card-text {
+  color: #717d96;
+  font-size: 12px;
+  max-width: 282px;
+}
+
+.top-wisata .wisata-cards .wisata-card #btn-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 12px;
+  gap: 8px;
+
+  width: auto;
+  height: auto;
+  border: none;
+
+  background: #ffb600;
+  box-shadow: 0px 9px 13.5px -2.7px rgba(0, 0, 0, 0.1),
+    0px 3.6px 5.4px -1.8px rgba(0, 0, 0, 0.05);
+  border-radius: 5.4px;
+}
+
+.top-wisata .wisata-cards .wisata-card #btn-card a{
+  margin: 4px 2px;
+  color: var(--secondary-color);
+  transform: scale(1.2);
+}
