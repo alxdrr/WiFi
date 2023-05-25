@@ -5,6 +5,7 @@
   width: 738px;
   height: 281px;
   margin-top: 15vw;
+  margin-bottom: 25vw;
 }
 
 .hero img {
@@ -46,17 +47,9 @@
   border-color: #ecfe86;
   outline: 0;
   box-shadow: 0 0 0 0.25rem #ffb7003f;
-
-/* ================================================== TOP WISATA ========================================= */
-.top-wisata {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 0px;
-  gap: 45px;
-  margin-top: 38%;
-  margin-bottom: 240px;
 }
+
+/* ================================================== search result ========================================= */
 
 .text-1 {
   color: #023047;
@@ -66,16 +59,17 @@
   font-size: 56px;
 }
 
-.top-wisata .wisata-cards {
+.result-cards {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 0px;
+  padding-top: 15vw;
+  padding-bottom: 7vw;
   gap: 32px;
 }
 
-.top-wisata .wisata-cards .wisata-card {
+.result-cards .result-card {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -91,11 +85,13 @@
     0px 9px 9px -4.5px rgba(0, 0, 0, 0.04);
   border-radius: 8px;
 }
-.top-wisata .wisata-cards .wisata-card img {
+.result-cards .result-card img {
   max-width: 20vw;
   padding: 1vh 1vw;
+  border-radius: 8%;
+}
 
-.top-wisata .wisata-cards .wisata-card .card-body {
+.result-cards .result-card .card-body {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -126,7 +122,7 @@
   max-width: 282px;
 }
 
-.top-wisata .wisata-cards .wisata-card #btn-card {
+.result-cards .result-card #btn-card {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -144,7 +140,7 @@
     0px 3.6px 5.4px -1.8px rgba(0, 0, 0, 0.05);
   border-radius: 5.4px;
 }
-.top-wisata .wisata-cards .wisata-card #btn-card {
+.result-cards .result-card #btn-card {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -164,7 +160,26 @@
   transition: all 0.1s;
 }
 
-.top-wisata .wisata-cards .wisata-card #btn-card:hover {
+.result-cards .result-card #btn-card:hover {
   scale: 1.2;
+  transition: all 0.2s;
+}
+
+.btn-explore {
+  padding: 12px 20px;
+  gap: 8px;
+
+  width: auto;
+  height: 48px;
+
+  border: 2px solid var(--secondary-color);
+  border-radius: 6px;
+  background: none;
+  font-family: var(--primary-font);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+
+  color: var(--secondary-color);
   transition: all 0.2s;
 }

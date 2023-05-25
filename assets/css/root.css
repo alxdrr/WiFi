@@ -63,3 +63,7 @@ ul {
   color: white;
   transition: all 0.2s;
 }
+.btn-explore:hover {
+  background-color: #002ca56b;
+  color: white;
+  transition: all 0.2s;

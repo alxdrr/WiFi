@@ -1,5 +1,5 @@
 function setScrolledNavbar() {
-    if (window.location.href.indexOf("homePage") === -1) {//bukan di home page shadow navbar akan langsung aktif
+    if (window.location.href.indexOf("index.html") === -1) {//bukan di home page shadow navbar akan langsung aktif
         navbar.classList.add("scrolled");
     } else {
         window.addEventListener("scroll", () => {//di home page shadow navbar aktif ketika discroll
