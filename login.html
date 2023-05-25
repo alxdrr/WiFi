@@ -1,10 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Wisata Find - Home</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -16,16 +14,21 @@
     <link rel="stylesheet" href="css/root.css" />
     <link rel="stylesheet" href="css/footer.css" />
     <link rel="stylesheet" href="css/navbar.css" />
+    <link rel="stylesheet" href="css/login.css" />
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
+    <title>Login Wisata-Find</title>
   </head>
+
   <body>
     <nav class="nav container-fluid">
-      <img src="assets/Brand.png" alt="" />
+      <a href="login.html">
+        <img src="assets/Brand.png" alt="" />
+      </a>
       <div class="nav-items">
-        <a class="active" href="">Home</a>
+        <a class="" href="home.html">Home</a>
         <a class="" href="">Search</a>
         <a class="" href="">Top Wisata</a>
         <div class="dropdown">
@@ -45,58 +48,68 @@
         </div>
       </div>
       <div class="button-stack">
-        <button class="btn-solid">Sign Up</button>
-        <button class="btn-outline">Login</button>
+        <a href="registrasi.php">
+          <button class="btn-solid">Sign Up</button>
+        </a>
       </div>
     </nav>
-    <section class="hero container-fluid">
-      <img src="assets/home-1.png" alt="" />
-      <div class="hero-text">
-        Discover the enchanting beauty of Bali's hidden treasures
-      </div>
-      <form action="" class="search-bar">
-        <input type="search" placeholder="Search" />
-        <input class="btn-solid" type="submit" value="Submit" />
-      </form>
-    </section>
 
-    <section class="top-wisata container-fluid">
-      <div class="text-1">Top Wisata</div>
-      <div class="wisata-cards">
-        <div class="wisata-card">
-          <img src="assets/gwk.png" class="card-img-top" alt="..." />
-          <div class="card-body">
-            <h1 class="card-title">Garuda Wisnu Kencana Cultural Park</h1>
-            <h1 class="card-desc">Taman Wisata</h1>
-            <h1 class="card-location">Jimbaran, Jl. Raya Uluwatu</h1>
-
-            <p class="card-text">
-              GWK Cultural Park is home to some of the most iconic cultural
-              landmarks in Bali, including the magnificent Garuda Wisnu Kencana
-              statue
-            </p>
-          </div>
-          <button id="btn-card">
-            <a
-              href="#"
-              class="bx bx-right-arrow-alt"
-            ></a>
-          </button>
+    <main class="form-signin w-100 mx-auto text-center">
+      <form method="post" action="../login.php">
+        <h1 class="text display-1 p-4 fw-bold text-warning">Login</h1>
+        <div class="form-floating mb-2">
+          <input
+            required
+            type="text"
+            name="username"
+            class="form-control"
+            id="floatingInput"
+          />
+          <label for="floatingInput">Username</label>
         </div>
-      </div>
-      <a href="#">
-        <button class="btn-outline">Explore 
-        <div class="bx bx-right-arrow-alt"></div></button>
-      </a>
-    </section>
+        <div class="form-floating">
+          <input
+            required
+            type="password"
+            name="password"
+            class="form-control"
+            id="floatingPassword"
+          />
+          <label for="floatingPassword">Password</label>
+        </div>
 
-    <footer class="footer container-fluid">
+        <div class="checkbox mb-3 text-start">
+          <label>
+            <input type="checkbox" name="remember" value="remember-me" />
+            Remember me
+          </label>
+        </div>
+        <button
+          class="w-100 btn btn-lg btn-primary"
+          type="submit"
+          name="submit"
+        >
+          Sign in
+        </button>
+        <div class="div">
+          <label class="mt-1" for=""
+            >Don't have account?
+            <a href="registrasi.php"> Register </a>
+          </label>
+        </div>
+        <p class="mt-3 mb-5 text-body-secondary">
+          &copy; 2023 Wisata Find, All Rights Reserved.
+        </p>
+      </form>
+    </main>
+
+    <footer class="footer py-10 container-fluid">
       <div id="connect">
         Connect With Us
         <div class="social-icon">
-          <a href="linked.com"><img src="Assets/icon/linkedin.png" alt="" /></a>
-          <a href="facebook.com"><img src="Assets/icon/fb.png" alt="" /></a>
-          <a href="twitter.com"><img src="Assets/icon/twt.png" alt="" /></a>
+          <a href="linked.com"><img src="assets/linkedin.png" alt="" /></a>
+          <a href="facebook.com"><img src="assets/fb.png" alt="" /></a>
+          <a href="twitter.com"><img src="assets/twt.png" alt="" /></a>
         </div>
       </div>
       <div id="explore">
@@ -130,7 +143,9 @@
       </div>
 
       <div id="copyright">
-        <a href=""><img src="assets/Brand.png" alt="" /></a>
+        <a href="login.html">
+          <img src="assets/Brand.png" alt="" />
+        </a>
         © 2023 Wisata Find, All Rights Reserved.
       </div>
     </footer>
