@@ -107,8 +107,9 @@ CREATE TABLE `reviews` (
   `username` varchar(100) NOT NULL,
   `date_review` datetime DEFAULT CURRENT_TIMESTAMP,
   `reviews` text NOT NULL,
+  `rating` varchar(5) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -117,7 +118,7 @@ CREATE TABLE `reviews` (
 
 LOCK TABLES `reviews` WRITE;
 /*!40000 ALTER TABLE `reviews` DISABLE KEYS */;
-INSERT INTO `reviews` VALUES (1,'Tanah Lot','andi','2023-05-26 01:08:10','Banyak ada makanan enak, Tempatnya sangat bagus ada goa ular juga'),(2,'Tanah Lot','ode','2023-05-26 01:08:36','Tempatnya sangat bagus, Bersih tempatnya, Puranya bagus, sunset bagus');
+INSERT INTO `reviews` VALUES (1,'Tanah Lot','andi','2023-05-26 01:08:10','Banyak ada makanan enak, Tempatnya sangat bagus ada goa ular juga','4.8'),(2,'Tanah Lot','ode','2023-05-26 01:08:36','Tempatnya sangat bagus, Bersih tempatnya, Puranya bagus, sunset bagus','4.5'),(3,'Monkey Forest Ubud','Aneka Truman','2023-05-26 20:22:23','Wonderful experience. A nice place to explore.','4.8'),(4,'Monkey Forest Ubud','Denise F','2023-05-26 20:23:49','I thought the experience was Unforgettable. The grounds are impeccable, the staff friendly and knowledgeable. The monkeys of course are a joy.','5.0'),(5,'Monkey Forest Ubud','Abigail Lorenzana','2023-05-26 20:25:44','It was a good experience! The monkeys are “free” Be cautious and follow the rules because they bite.','4.3');
 /*!40000 ALTER TABLE `reviews` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -162,7 +163,7 @@ CREATE TABLE `wisata_events` (
   `event_date` date NOT NULL,
   `detail` text NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -171,7 +172,7 @@ CREATE TABLE `wisata_events` (
 
 LOCK TABLES `wisata_events` WRITE;
 /*!40000 ALTER TABLE `wisata_events` DISABLE KEYS */;
-INSERT INTO `wisata_events` VALUES (1,'Tanah Lot','Tanah Lot Arts Festival','2023-06-01','The town of Tabanan, Bali is home to Tanah Lot Temple. A beautiful and magnificent temple standing on an offshore island. Right in the northwestern of Denpasar. Thousands of tourist visit this site every year. Then the government thought of an upgrade. That\'s how Tanah Lot Arts Festival started. The target was 55,000 thousand visitors. It also introduces a massive performance by 1800 dancers called Rejang Sandat. Tanah Lot Arts Festival runs for three days showcasing numerous cultural Tabanan heritage. While the schedule isn\'t limited to arts, it also has culinary sections. Where the coffee festival will also take part, it exhibits local coffee varieties as well as talented baristas from coffee shops across the city.');
+INSERT INTO `wisata_events` VALUES (1,'Tanah Lot','Tanah Lot Arts Festival','2023-06-01','The town of Tabanan, Bali is home to Tanah Lot Temple. A beautiful and magnificent temple standing on an offshore island. Right in the northwestern of Denpasar. Thousands of tourist visit this site every year. Then the government thought of an upgrade. That\'s how Tanah Lot Arts Festival started. The target was 55,000 thousand visitors. It also introduces a massive performance by 1800 dancers called Rejang Sandat. Tanah Lot Arts Festival runs for three days showcasing numerous cultural Tabanan heritage. While the schedule isn\'t limited to arts, it also has culinary sections. Where the coffee festival will also take part, it exhibits local coffee varieties as well as talented baristas from coffee shops across the city.'),(2,'GWK','10th DJAKARTA WAREHOUSE PROJECT','2023-12-07','Are you ready for the ultimate party of the year? Brace yourself! This year, the urban music fiesta of Djakarta Warehouse Project celebrates its 10 years milestone in a most spectacular way : the epic fiesta this year will  move from its original home in the capital city of Jakarta to the idyllic island of Bali at the imposing venue that is the Garuda Wisnu Kencana Cultural Park. In addition,  DWPX (10th Anniversary Edition) will be extended from the usual two days to  three  full days of electrifying music, from 7th to 9th December.');
 /*!40000 ALTER TABLE `wisata_events` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -184,4 +185,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-05-26 19:28:39
+-- Dump completed on 2023-05-26 20:53:34

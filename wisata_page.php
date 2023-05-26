@@ -1,21 +1,8 @@
 <?php
-    //Kirim Data kesini masuk
-    //$place_name = $_POST["place_name"];
-    //sementara
+    require "function.php";
     $place_name = $_GET["place"];
-    $data = [
-        "GWK" => [
-            "title" => "Garuda Wisnu Kencana",
-            "address" => "Jl. Raya Uluwatu, Ungasan, Kuta Sel, Kabupaten Badung, Bali",
-            "fee" => "300.000"
-        ],
-        "Tanah Lot" => [
-            "title" => "Pantai Tanah Lot",
-            "address" => "Br. Beraban, Kec. Kediri, Kabupaten Tabanan, Bali",
-            "fee" => "200.000"
-        ],
-    ];
-    $selected_data = $data[$place_name]; 
+    $selected_data = get_detail_wisata($place_name);
+    $price = explode(' ', $selected_data['price'])
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -64,8 +51,7 @@
         </div>
       </div>
       <div class="button-stack">
-        <a href="regis.php"><button class="btn-solid">Sign Up</button></a>
-        <a href="login.html"><button class="btn-outline">Login</button></a>
+          <?php (isset($_SESSION['save']))? "":show_button_regis_login() ?>
       </div>
     </nav>
     <section class="hero">
@@ -81,7 +67,7 @@
             <section class="info">
                 <h1 class="title"><?php echo $selected_data["title"]?></h1>
                 <h1 class="desc">Dictumst scelerisque ut commodo dis. Risus ac tellus sapien gravida sit elementum dui eget nunc. Eu arcu montes, sit elit, maecenas feugiat. Urna, habitant suspendisse suspendisse pharetra nec. Nibh mauris nullam nec mattis.</h1>
-                <h1 class="fee">Fee: <?php echo $selected_data["fee"] ?></h1>
+                <h1 class="fee">Price: <?php echo $price[0]?>/<?php echo $price[1]?> </h1>
             </section>
 
             <section class="gallery">
