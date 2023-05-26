@@ -1,0 +1,119 @@
+@import url(root.css);
+.hero {
+  display: flex;
+  height: 832px;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+}
+.bg-img {
+  width: 100vw;
+  filter: blur(2px) brightness(60%);
+  position: absolute; /* Ubah nilai blur sesuai keinginan */
+  max-height: 100vh;
+  z-index: -1;
+  top: auto;
+}
+
+.copy {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.header {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 64px;
+  line-height: 120%;
+  color: var(--primary-color) !important;
+  width: auto;
+}
+.address {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 140%;
+  color: white;
+}
+/* ==================================================  Content ========================================= */
+.content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 3vw;
+  margin: 10vw 20vw;
+}
+.left-content,
+.right-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  max-height: 60vw;
+  height: auto;
+}
+.left-content section,
+.right-content section {
+  display: flex;
+  flex-direction: column;
+
+  min-width: 40vw;
+  max-width: 40vw;
+  width: auto;
+  max-height: 30vw;
+  min-height: 30vw;
+  height: auto;
+  
+}
+.divider {
+  border: 2px solid #023047;
+  height: 60vw;
+}
+/* ================================================== INFO ========================================= */
+.info, .gallery, .event, .reviews {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 24px;
+}
+
+.title,
+.info .fee {
+  color: var(--secondary-color);
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 140%;
+}
+
+.info .desc {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  max-width: 431px;
+}
+/* ================================================== Gallery ========================================= */
+#carousel {
+  position: relative;
+  z-index: 0;
+}
+.carousel-inner {
+  max-width: 360px;
+  min-width: 360px;
+  border-radius: 8px;
+  padding: 0;
+  margin: 0;
+}
+.carousel-item img {
+  width: 360px;
+  height: 240px;
+  border-radius: 8px;
+}
