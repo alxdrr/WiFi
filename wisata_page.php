@@ -27,7 +27,7 @@
       rel="stylesheet"
     />
 </head>
-<body>
+<body id="nilai" getNilai="<?php echo $place_name;?>">
     <nav class="nav container-fluid" style="z-index: 1;">
       <img src="assets/image/Brand.png" alt="" />
       <div class="nav-items">
@@ -103,11 +103,11 @@
         <div class="divider"></div>
         <section class="right-content">
             <section class="event">
-                <h1 class="title">Events</h1>
+                <h1 class="title" id="event">Events</h1>
                 <div id="list-event"><!-- nanti list eventnya disini --></div>
             </section>
             <section class="reviews">
-                    <h1 class="title">Reviews</h1>
+                    <h1 class="title" id="review">Reviews</h1>
                     <div id="list-review"><!-- nanti list reviewnya disini --></div>
             </section>
         </section>

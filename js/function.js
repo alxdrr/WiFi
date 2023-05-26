@@ -1,8 +1,8 @@
 //Value yang akan dikirim
-const getValue =document.getElementById("nilai").getAttribute("getNilai");
+const getValue = document.getElementById("nilai").getAttribute("getNilai");
 //Bagian show event
 const showEvent = document.getElementById("event");
-const eventPlace =  document.getElementById("list event");
+const eventPlace =  document.getElementById("list-event");
 let a = 0;
 showEvent.addEventListener('click', function(){
     if(a == 0){
@@ -28,7 +28,7 @@ showEvent.addEventListener('click', function(){
 
 //Bagian show review
 const showReview = document.getElementById("review");
-const reviewPlace = document.getElementById("list review")
+const reviewPlace = document.getElementById("list-review")
 let i = 0;
 
 showReview.addEventListener('click', function(){
