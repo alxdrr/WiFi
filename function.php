@@ -42,20 +42,39 @@ function search_wisata_place($search_word){
   }
 }
 
-  function show_wisata_image($wisata_places){
-    if($wisata_places !== null){
-      foreach($wisata_places as $place){
-        $image_path = "Tempat Wisata\\" . $place . "\\" . $place . "-1.jpg";
-        echo "<div class='result-card'>";
-        echo "<img src='$image_path' alt='no found image' class='card-img-top'";
-        echo "<h1 class='card-title'><?php echo '$place'?></h1>";
-        echo "<h1 class='card-desc'>Taman Wisata</h1>";
-        echo "<h1 class='card-location'>Jimbaran, Jl. Raya Uluwatu</h1>";
-        echo "<p class='card-text'>GWK Cultural Park is home to some of the most iconic cultural landmarks in Bali, including the magnificent Garuda Wisnu Kencana statue </p>";
-        echo "<a id='btn-card' href='#' class='bx bx-right-arrow-alt' type='button'></a>";
-        echo "</div>";
-      }
-    }else{
-      return 0;
-    }
+function get_detail_search(){
+  global $conn;
+  $query = mysqli_query($conn, "SELECT * FROM detail_wisata");
+  while( $temp = mysqli_fetch_assoc($query)){
+    $detail_places[] = $temp;
   }
+  for($i=0; $i < count($detail_places); $i++){
+    $list_details[$detail_places[$i]["place_name"]] = $detail_places[$i];
+  }
+  return $list_details;  
+}
+
+function show_wisata_image($wisata_places){
+  // var_dump($wisata_places);
+  if($wisata_places !== null){
+    $details = get_detail_search();
+  //   var_dump($details["Tanah Lot"]["address"]);
+    foreach($wisata_places as $place){
+      $title = $details[$place]["title"];
+      $desc = $details[$place]["quick_desc"];
+      $address = $details[$place]["address"];
+      $definition = $details[$place]["quick_definition"];
+      $image_path = "Tempat Wisata\\" . $place . "\\" . $place . "-1.jpg";
+      echo "<div class='result-card'>";
+      echo "<img src='$image_path' alt='no found image' class='card-img-top'";
+      echo "<h1 class='card-title'>$title</h1>";
+      echo "<h1 class='card-desc'>$desc</h1>";
+      echo "<h1 class='card-location'>$address</h1>";
+      echo "<p class='card-text'>$definition</p>";
+      echo "<a id='btn-card' href='wisata_page.php?place=$place' class='bx bx-right-arrow-alt' type='button'></a>";
+      echo "</div>";
+    }
+  }else{
+    return 0;
+  }
+}

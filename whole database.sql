@@ -1,5 +1,3 @@
-CREATE DATABASE  IF NOT EXISTS `wisata_finder` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
-USE `wisata_finder`;
 -- MySQL dump 10.13  Distrib 8.0.31, for Win64 (x86_64)
 --
 -- Host: localhost    Database: wisata_finder
@@ -30,8 +28,10 @@ CREATE TABLE `detail_wisata` (
   `title` varchar(50) NOT NULL,
   `price` varchar(25) NOT NULL,
   `address` varchar(100) NOT NULL,
+  `quick_desc` varchar(30) DEFAULT NULL,
+  `quick_definition` text NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -40,7 +40,7 @@ CREATE TABLE `detail_wisata` (
 
 LOCK TABLES `detail_wisata` WRITE;
 /*!40000 ALTER TABLE `detail_wisata` DISABLE KEYS */;
-INSERT INTO `detail_wisata` VALUES (1,'Tanah Lot','Tanah Lot','20.000 orang','Br. Beraban, Kec. Kediri, Kabupaten Tabanan, Bali');
+INSERT INTO `detail_wisata` VALUES (1,'Tanah Lot','Tanah Lot','20.000 orang','Br. Beraban, Kec. Kediri, Kabupaten Tabanan, Bali','Temple in the Open Ocean','To many people, Tanah Lot epitomizes the romantic island of Bali. Tanah Lot means Land in The Sea, a perfectly fit name for its unique offshore settings. The silhouette of Pura Tanah Lot is one of the most popular iconic features of Bali.'),(2,'GWK','Garuda Wisnu Kencana','200.000 orang','Jl. Raya Uluwatu, Ungasan, Kuta Sel, Kabupaten Badung, Bali','Cultural Park','GWK Cultural Park is home to some of the most iconic cultural landmarks in Bali, including the magnificent Garuda Wisnu Kencana statue, which stands tall at 121 meters and is a representation of the Hindu god Vishnu and his mount, the Garuda bird.'),(3,'Monkey Forest Ubud','Sacred Monkey Forest Sanctuary','100.000 orang','Jl. Monkey Forest, Ubud, Kecamatan Ubud, Kabupaten Gianyar, Bali','Sanctuary','The Ubud Monkey Forest is a nature reserve and temple complex in Ubud, Bali. It houses approximately 340 monkeys which are known as long-tailed Macaques (Macaca fascicularis). There are four groups of monkeys each occupying different territories in the park. The Sacred Monkey Forest is a popular tourist attraction in Ubud and is often visited by over 10,000 tourists a month.'),(4,'Pantai Jimbaran','Jimbaran Beach','0 orang','Jimbaran Village, Kabupaten Badung, Bali','White Sand Beach','One of the white sand beaches with sunset views that are so beautiful, so beautiful every evening this beach is crowded with visitors. Jimbaran Beach is one of the tourist attractions in Jimbaran Bali which is very well known to foreign countries. the sand is fine and white to yellow – brass. Cleanliness on this beach is always maintained, because there are janitors on duty to clean the beach area.'),(5,'Kebun Raya Bedugul','Bedugul Botanical Garden','15.500 orang','Jl. Kebun Raya Candikuning, Baturiti, Kabupaten Tabanan, Bali','Botanical Garden','Tourist attractions Bedugul Bali Botanical Garden or known as the Bali Botanical Garden, one of the 10 favorite and famous tourist attractions in Bali which are most frequently visited by tourists.');
 /*!40000 ALTER TABLE `detail_wisata` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -182,4 +182,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-05-26  3:07:43
+-- Dump completed on 2023-05-26 11:59:36
