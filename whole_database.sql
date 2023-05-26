@@ -132,6 +132,8 @@ CREATE TABLE `users` (
   `username` varchar(100) NOT NULL,
   `password` varchar(200) NOT NULL,
   `role` varchar(10) NOT NULL,
+  `email` varchar(100) DEFAULT NULL,
+  `fullname` varchar(150) DEFAULT NULL,
   PRIMARY KEY (`username`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -142,7 +144,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES ('admin','admin','1'),('andi','andi','0');
+INSERT INTO `users` VALUES ('admin','admin','1',NULL,NULL),('andi','andi','0',NULL,NULL),('ardik','ppppp','0','ooooo@gmail.com','irfan ode ardik'),('deode','ooooo','0','odeeeee@gmail.com','ode ardika'),('ifode','irfan','0','irfanardika@gmail.com','irfan ardika'),('odeardika','odeardika','1',NULL,NULL),('odeputu','12345','0','putuode@gmail.com','ode putu'),('sing up','12345','0','singup@gmail.com','test sign up');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -182,4 +184,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-05-26 11:59:36
+-- Dump completed on 2023-05-26 19:28:39
