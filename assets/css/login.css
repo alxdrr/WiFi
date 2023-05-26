@@ -5,7 +5,9 @@
   justify-content: center;
   gap: 10vw;
   padding: 0 10vw;
-  margin: 5vw 0;
+  margin-bottom: 10vh;
+  margin-top: 20vh;
+  top: 5vw;
 }
 
 .form-signin form {
@@ -82,4 +84,3 @@ form h1 {
   --bs-btn-disabled-bg: #c99000;
   --bs-btn-disabled-border-color: #0d6efd;
 }
-

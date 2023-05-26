@@ -2,7 +2,7 @@
 $host = "localhost";
 $name = "wisata_finder";
 $user = "root";
-$pass = "125125";
+$pass = "";
 $conn = mysqli_connect($host, $user, $pass, $name);
 if (!$conn) {
   die("Connection failed: " . mysqli_connect_error());

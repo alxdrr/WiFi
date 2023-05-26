@@ -53,7 +53,7 @@ if (isset($_POST["registrasi"])) {
   <nav class="nav container-fluid">
         <img src="assets/image/Brand.png" alt="" />
         <div class="nav-items">
-          <a class="" href="index.html">Home</a>
+          <a class="" href="index.php">Home</a>
           <a class="" href="">Search</a>
           <a class="" href="">Top Wisata</a>
           <div class="dropdown">
@@ -73,7 +73,7 @@ if (isset($_POST["registrasi"])) {
           </div>
         </div>
         <div class="button-stack">
-          <a href="login.html"><button class="btn-outline">Login</button></a>
+          <a href="login.php"><button class="btn-outline">Login</button></a>
         </div>
   </nav>
 
@@ -153,10 +153,11 @@ if (isset($_POST["registrasi"])) {
       </div>
 
       <div id="copyright">
-        <a href="index.html"><img src="assets/image/Brand.png" alt="" /></a>
+        <a href="index.php"><img src="assets/image/Brand.png" alt="" /></a>
         © 2023 Wisata Find, All Rights Reserved.
       </div>
     </footer>
+    <script src="assets/js/navbar.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script>
 </body>

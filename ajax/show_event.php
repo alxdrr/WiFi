@@ -4,20 +4,22 @@
     $events = get_events(str_replace("%"," ", $key));
 ?>
 
-<div id="list review">
-    <table id="tabel review">
-        <tr>
-            <th>Date</th>
-            <th>Event Name</th>
-            <th>Detail</th>
-        </tr>
-        <?php foreach($events as $event): ?>
-        <tr>
-            <td><?php echo $event["event_date"]?></td >
-            <td><?php echo $event["event_name"]?></td>
-            <td><?php echo $event["detail"]?></td>
-        </tr>
-        <?php endforeach ?>
-    </table>
-</div>
+<head>
+    <link rel="stylesheet" href="assets/css/wisata.css" />
+    <link rel="stylesheet" href="assets/css/root.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+</head>
+<body>
+    <?php foreach($events as $event): ?>
+    <h1 class="e-title"><?php echo $event["event_name"]?></h1>
+    <h1 class="e-date"><?php echo $event["event_date"]?></h1>
+    <h1 class="e-desc"><?php echo $event["detail"]?></h1>
+    <?php endforeach ?>  
+</body>
+
 

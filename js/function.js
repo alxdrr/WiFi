@@ -1,56 +1,43 @@
-//Value yang akan dikirim
-const getValue = document.getElementById("nilai").getAttribute("getNilai");
-//Bagian show event
-const showEvent = document.getElementById("event");
-const eventPlace =  document.getElementById("list-event");
+// Bagian show event
+const eventPlace = document.getElementById("list-event");
 let a = 0;
-showEvent.addEventListener('click', function(){
-    if(a == 0){
-    //Buat objek ajax
-    var xhr = new XMLHttpRequest();
-    
-    //cek kesiapan ajax
-    xhr.onreadystatechange = function(){
-        if(xhr.readyState == 4 && xhr.status == 200){
-            eventPlace.innerHTML = xhr.responseText;
-            a += 1;
-        }
-    }
-    xhr.open('GET', `ajax/show_event.php?place=Tanah%Lot`, true);
-    xhr.send();
-    }
-    else{
-        eventPlace.innerHTML = "";
-        a -= 1;
-    }
 
-})
+if (a == 0) {
+  // Buat objek ajax
+  var xhrEvent = new XMLHttpRequest();
 
-//Bagian show review
-const showReview = document.getElementById("review");
-const reviewPlace = document.getElementById("list-review")
+  // Cek kesiapan ajax
+  xhrEvent.onreadystatechange = function () {
+    if (xhrEvent.readyState == 4 && xhrEvent.status == 200) {
+      eventPlace.innerHTML = xhrEvent.responseText;
+      a += 1;
+    }
+  };
+  xhrEvent.open("GET", "ajax/show_event.php?place=Tanah%Lot", true);
+  xhrEvent.send();
+} else {
+  eventPlace.innerHTML = "";
+  a -= 1;
+}
+
+// Bagian show review
+const reviewPlace = document.getElementById("list-review");
 let i = 0;
 
-showReview.addEventListener('click', function(){
-    if(i == 0){
-    //Buat objek ajax
-    var xhr = new XMLHttpRequest();
-    
-    //cek kesiapan ajax
-    xhr.onreadystatechange = function(){
-        if(xhr.readyState == 4 && xhr.status == 200){
-            reviewPlace.innerHTML = xhr.responseText;
-            i += 1;
-        }
-    }
-    xhr.open('GET', `ajax/show_reviews.php?place=Tanah%Lot`, true);
-    xhr.send();
-    }
-    else{
-        reviewPlace.innerHTML = "";
-        i -= 1;
-    }
+if (i == 0) {
+  // Buat objek ajax
+  var xhrReview = new XMLHttpRequest();
 
-})
-
-
+  // Cek kesiapan ajax
+  xhrReview.onreadystatechange = function () {
+    if (xhrReview.readyState == 4 && xhrReview.status == 200) {
+      reviewPlace.innerHTML = xhrReview.responseText;
+      i += 1;
+    }
+  };
+  xhrReview.open("GET", "ajax/show_reviews.php?place=Tanah%Lot", true);
+  xhrReview.send();
+} else {
+  reviewPlace.innerHTML = "";
+  i -= 1;
+}

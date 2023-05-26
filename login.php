@@ -33,7 +33,7 @@ if (isset($_POST['submit'])) {
     <nav class="nav container-fluid">
       <img src="assets/image/Brand.png" alt="" />
       <div class="nav-items">
-        <a class="" href="index.html">Home</a>
+        <a class="" href="index.php">Home</a>
         <a class="" href="">Search</a>
         <a class="" href="">Top Wisata</a>
         <div class="dropdown">
@@ -156,7 +156,7 @@ if (isset($_POST['submit'])) {
       </div>
 
       <div id="copyright">
-        <a href="index.html"><img src="assets/image/Brand.png" alt="" /></a>
+        <a href="index.php"><img src="assets/image/Brand.png" alt="" /></a>
         © 2023 Wisata Find, All Rights Reserved.
       </div>
     </footer>

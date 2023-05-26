@@ -4,7 +4,7 @@
   gap: 16px;
   width: 738px;
   height: 281px;
-  margin-top: 5vw;
+  margin-top: 18vw;
 }
 .hero img {
   position: absolute;
@@ -53,7 +53,7 @@
   align-items: center;
   padding: 0px;
   gap: 45px;
-  margin-top: 600px;
+  margin-top: 45vw;
   margin-bottom: 240px;
 }
 
@@ -93,7 +93,6 @@
 .top-wisata .wisata-cards .wisata-card img {
   max-width: fit-content;
 }
-
 
 .top-wisata .wisata-cards .wisata-card .card-body {
   display: flex;
@@ -144,9 +143,8 @@
   border-radius: 5.4px;
 }
 
-.top-wisata .wisata-cards .wisata-card #btn-card a{
+.top-wisata .wisata-cards .wisata-card #btn-card a {
   margin: 4px 2px;
   color: var(--secondary-color);
   transform: scale(1.2);
-  
 }

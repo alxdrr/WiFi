@@ -31,7 +31,7 @@
     <nav class="nav container-fluid" style="z-index: 1;">
       <img src="assets/image/Brand.png" alt="" />
       <div class="nav-items">
-        <a class="" href="index.html">Home</a>
+        <a class="" href="index.php">Home</a>
         <a class="" href="search.php">Search</a>
         <a class="" href="">Top Wisata</a>
         <div class="dropdown">

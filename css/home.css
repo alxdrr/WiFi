@@ -4,7 +4,7 @@
   gap: 16px;
   width: 738px;
   height: 281px;
-  margin-top: 5vw;
+  margin-top: 20vw;
 }
 .hero img {
   position: absolute;
@@ -142,7 +142,7 @@
   border-radius: 5.4px;
 }
 
-.top-wisata .wisata-cards .wisata-card #btn-card a{
+.top-wisata .wisata-cards .wisata-card #btn-card a {
   margin: 4px 2px;
   color: var(--secondary-color);
   transform: scale(1.2);

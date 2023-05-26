@@ -62,19 +62,21 @@
   flex-direction: column;
 
   min-width: 40vw;
-  max-width: 40vw;
+  max-width: 50vw;
   width: auto;
   max-height: 30vw;
   min-height: 30vw;
   height: auto;
-  
 }
 .divider {
   border: 2px solid #023047;
   height: 60vw;
 }
 /* ================================================== INFO ========================================= */
-.info, .gallery, .event, .reviews {
+.info,
+.gallery,
+.event,
+.reviews {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -116,4 +118,39 @@
   width: 360px;
   height: 240px;
   border-radius: 8px;
+}
+/* ================================================== ajax ========================================= */
+.e-title {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 150%;
+  max-width: 431px;
+}
+.e-desc, .r-review {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  max-width: auto;
+}
+
+.e-date, .r-name {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 150%;
+  max-width: 540px;
+}
+
+.r-date{
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 150%;
+  max-width: auto;
 }
