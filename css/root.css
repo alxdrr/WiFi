@@ -10,7 +10,7 @@
 }
 
 *,h1 {
-    margin: 0;
+    margin: 0px;
     padding: 0;
     outline: 0;
     box-sizing: border-box;
@@ -46,3 +46,11 @@ ul {
     margin: 0;
     padding: 0;
 }
+
+.form-control:focus {
+    color: var(--bs-body-color);
+    background-color: var(--bs-form-control-bg);
+    border-color: #ecfe86;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem #ffb7003f;
+  }

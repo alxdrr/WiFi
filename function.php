@@ -16,7 +16,7 @@ return $arrQuery;
 
 function search_wisata_place($search_word){
   # Menyimpan key untuk diambil data tempat wisatanya di database
-  $data_pariwisata = get_wisata_place_keyword(); 
+  $data_pariwisata = get_wisata_place_keywords(); 
   # Mengambil key yang di input oleh user
   $temp_item = [];
   // kalok $_POST["search"] ada valuenya baru search

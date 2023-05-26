@@ -14,7 +14,6 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Wisata Find - Home</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -30,13 +29,15 @@
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
-</head>
+    <title>Login Wisata-Find</title>
+  </head>
+
   <body>
-  <nav class="nav container-fluid">
+    <nav class="nav container-fluid">
       <img src="assets/image/Brand.png" alt="" />
       <div class="nav-items">
         <a class="" href="index.html">Home</a>
-        <a class="active" href="">Search</a>
+        <a class="" href="">Search</a>
         <a class="" href="">Top Wisata</a>
         <div class="dropdown">
           <button

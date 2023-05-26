@@ -1,5 +1,4 @@
 <?php
-
 $host = "localhost";
 $name = "wisata_finder";
 $user = "root";
@@ -9,7 +8,7 @@ if (!$conn) {
   die("Connection failed: " . mysqli_connect_error());
 }
 
-function get_wisata_place_keyword(){
+function get_wisata_place_keywords(){
   global $conn;
 
   // Mengambil data dari database
