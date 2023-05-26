@@ -36,8 +36,8 @@
     <nav class="nav container-fluid">
       <img src="assets/image/Brand.png" alt="" />
       <div class="nav-items">
-        <a class="" href="index.html">Home</a>
-        <a class="" href="">Search</a>
+        <a class="" href="index.php">Home</a>
+        <a class="<?php echo "active"?>" href="">Search</a>
         <a class="" href="">Top Wisata</a>
         <div class="dropdown">
           <button
@@ -56,8 +56,7 @@
         </div>
       </div>
       <div class="button-stack">
-        <a href="regis.php"><button class="btn-solid">Sign Up</button></a>
-        <a href="login.html"><button class="btn-outline">Login</button></a>
+      <?php (isset($_SESSION['save']))? "":show_button_regis_login() ?>
       </div>
   </nav>
 
@@ -124,7 +123,7 @@
       </div>
 
       <div id="copyright">
-        <a href="index.html"><img src="assets/image/Brand.png" alt="" /></a>
+        <a href="index.php"><img src="assets/image/Brand.png" alt="" /></a>
         © 2023 Wisata Find, All Rights Reserved.
       </div>
     </footer>

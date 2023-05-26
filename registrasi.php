@@ -1,6 +1,29 @@
 <?php
 require "function.php";
 ?>
+<?php
+if (isset($_POST["registrasi"])) {
+  if ($_POST['password'] === $_POST['confirm_password']) {
+    $fullname = $_POST["fullname"];
+    $username = $_POST["username"];
+    $email = $_POST["email"];
+    $password = $_POST["password"];
+    $sql = "SELECT COUNT(*) AS sum FROM `users` WHERE username = '$username'";
+    $arrUser = get_query($sql);
+    if ($arrUser[0]['sum'] == '0') {
+      $sql = "INSERT INTO `users` (`fullname`, `username`, `email`, `password`, `role`) VALUES ('$fullname', '$username', '$email', '$password', '0');";
+      mysqli_query($conn, $sql);
+      $_SESSION['save'] = $username;
+      header("location: index.php");
+      exit();
+    } else {
+      echo "<script>alert('username sudah digunakan')</script>";
+    }
+  } else {
+    echo "<p> Gagal </p>";
+  }
+}
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -140,24 +163,3 @@ require "function.php";
 
 </html>
 
-<?php
-if (isset($_POST["registrasi"])) {
-  if ($_POST['password'] === $_POST['confirm_password']) {
-    $fullname = $_POST["fullname"];
-    $username = $_POST["username"];
-    $email = $_POST["email"];
-    $password = $_POST["password"];
-    $sql = "SELECT COUNT(*) AS sum FROM `users` WHERE username = '$username'";
-    $arrUser = get_query($sql);
-    if ($arrUser[0]['sum'] == '0') {
-      $sql = "INSERT INTO `users` (`fullname`, `username`, `email`, `password`, `role`) VALUES ('$fullname', '$username', '$email', '$password', '0');";
-      mysqli_query($conn, $sql);
-      header("location: login.html");
-    } else {
-      echo "<script>alert('username sudah digunakan')</script>";
-    }
-  } else {
-    echo "<p> Gagal </p>";
-  }
-}
-?>

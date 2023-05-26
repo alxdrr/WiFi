@@ -1,4 +1,5 @@
 <?php 
+session_start();
 require "db.php";
 function get_query($sql)
 {
@@ -77,4 +78,21 @@ function show_wisata_image($wisata_places){
   }else{
     return 0;
   }
+}
+
+
+function check_login($user, $pass){
+
+  $sql = "SELECT COUNT(*) AS sum FROM `users` WHERE username = '$user' AND password = '$pass'";
+  $arrLogin = get_query($sql);
+
+  if ($arrLogin[0]['sum'] == '1') {
+    $_SESSION['save'] = $user;
+    header("location: index.php");
+  }
+}
+
+function show_button_regis_login(){
+  echo "<a href='registrasi.php'><button class='btn-solid'>Sign Up</button></a>";
+  echo "<a href='login.php'><button class='btn-outline'>Login</button></a>";
 }
